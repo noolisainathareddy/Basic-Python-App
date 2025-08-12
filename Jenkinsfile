@@ -4,7 +4,9 @@
         stage('Start'){
             steps{
                 echo 'Pipeline started'
-                ech 'This is test branch'
+                echo 'This is test branch'
+                sh "echo ${params.BRANCH_NAME}"
+
             }
         }
         stage('Docker Build'){
