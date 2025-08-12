@@ -4,6 +4,7 @@
         stage('Start'){
             steps{
                 echo 'Pipeline started'
+                ech 'This is test branch'
             }
         }
         stage('Docker Build'){
