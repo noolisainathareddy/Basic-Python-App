@@ -3,7 +3,15 @@ kind: ConfigMap
 metadata:
   name: python-app-config
 data:
-  NAME: "sai"
+  NAME: "hema"
   AGE: "27"
   CITY: "hyderabad"
   COUNTRY: "India"
+  resource.customizations.health.ConfigMap: |
+    hs = {}
+    hs.status = "Healthy"
+    if obj.data.NAME == hema then
+        hs.status = "Degraded"
+        hs.message = "Please change the name to Sai"
+    end
+    return hs
