@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+    name: basic-python-app
+    labels:
+        app: basic-app
+        env: dev-nkit
+        role: backend
+spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: basic-app
+    template:
+      metadata:
+        labels:
+          app: basic-app
+      spec:
+          containers:
+              - name: basic-python-app
+                image: nooli/basic-python-app:latest
+                imagePullPolicy: Always
+                ports:
+                  - containerPort: 8000
+                envFrom:
+                  - configMapRef:
+                      name: python-app-config
