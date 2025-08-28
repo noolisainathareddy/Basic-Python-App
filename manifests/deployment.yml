@@ -4,7 +4,7 @@ metadata:
     name: basic-python-app
     labels:
         app: basic-app
-        env: production
+        env: dev
         role: backend
 spec:
     containers:
