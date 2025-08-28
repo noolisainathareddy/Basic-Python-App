@@ -1,10 +1,13 @@
 from fastapi import FastAPI
+import os
 
 app = FastAPI()
 
 @app.get("/")
 def home_page():
-    return "This is home page"
+    name = os.getenv("NAME")
+    return f"This is home page ${name}"
+
 
 @app.get("/health")
 def app_health():
@@ -13,3 +16,4 @@ def app_health():
 @app.get("/project-name")
 def get_app_name():
     return "Bsic-Python-App"
+

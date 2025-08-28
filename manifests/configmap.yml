@@ -6,6 +6,3 @@ data:
   NAME: "sai"
   AGE: "27"
   CITY: "hyderabad"
-  EDUCATION:
-    SCHOOL: "Chaitantanya HS"
-    COLLEGE: "JNTU"
