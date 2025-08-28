@@ -10,7 +10,7 @@ data:
   resource.customizations.health.ConfigMap: |
     hs = {}
     hs.status = "Healthy"
-    if obj.data.NAME == hema then
+    if obj.data.NAME == "hema" then
         hs.status = "Degraded"
         hs.message = "Please change the name to Sai"
     end
