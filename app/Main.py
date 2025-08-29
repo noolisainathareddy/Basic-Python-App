@@ -11,7 +11,7 @@ def home_page():
 
 @app.get("/health")
 def app_health():
-    return 'App is up and running'
+    return 'App is up and running fine!'
 
 @app.get("/project-name")
 def get_app_name():
