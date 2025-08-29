@@ -15,5 +15,5 @@ def app_health():
 
 @app.get("/project-name")
 def get_app_name():
-    return "Bsic-Python-App using FastAPI"
+    return "Bsic-Python-App using FastAPI - sp1"
 
