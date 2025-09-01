@@ -6,6 +6,7 @@ app = FastAPI()
 @app.get("/")
 def home_page():
     name = os.getenv("NAME")
+    age = 28
     return f"This is home page ${name}"
 
 
