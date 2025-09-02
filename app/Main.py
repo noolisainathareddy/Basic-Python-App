@@ -1,21 +1,15 @@
 from fastapi import FastAPI
-import os
 
 app = FastAPI()
 
 @app.get("/")
 def home_page():
-    name = os.getenv("NAME")
-    age = 28
-    return f"This is home page ${name}"
-
+    return "This is home page"
 
 @app.get("/health")
 def app_health():
-    return 'App is up and running fine! - sp1'
+    return 'App is up and running'
 
 @app.get("/project-name")
 def get_app_name():
-    return "App Bsic-Python-App using FastAPI"
-
-
+    return "Bsic-Python-App"
