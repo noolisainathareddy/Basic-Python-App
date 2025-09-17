@@ -12,4 +12,4 @@ def app_health():
 
 @app.get("/project-name")
 def get_app_name():
-    return "Bsic-Python-App Main"
+    return "Bsic-Python-App Main from dev"
